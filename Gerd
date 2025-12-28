@@ -1,0 +1,250 @@
+/* Jellyfin Custom CSS Theme - Modern Dark */
+
+/* ===== Global Styles ===== */
+:root {
+    --accent-color: #00a4dc;
+    --accent-hover: #0096cc;
+    --background-primary: #0f0f1e;
+    --background-secondary: #1a1a2e;
+    --background-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-radius: 12px;
+}
+
+/* Background */
+.backgroundContainer {
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+}
+
+/* ===== Card Styling ===== */
+.cardBox,
+.itemDetailPage,
+.verticalSection {
+    background: rgba(22, 33, 62, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+    border-radius: var(--border-radius) !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 164, 220, 0.3);
+}
+
+/* ===== Poster & Media Item Styling ===== */
+.cardContent-button,
+.itemAction {
+    background: rgba(22, 33, 62, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+}
+
+.cardImageContainer {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* ===== Button Styling ===== */
+.button-flat,
+.raised {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button-flat:hover,
+.raised:hover {
+    background: var(--accent-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 164, 220, 0.4);
+}
+
+/* Play Button */
+.paper-icon-button-light:hover:not(:disabled) {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* ===== Top Bar & Navigation ===== */
+.skinHeader {
+    background: rgba(15, 15, 30, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerButton {
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.headerButton:hover {
+    background: rgba(0, 164, 220, 0.2) !important;
+}
+
+/* ===== Sidebar ===== */
+.navDrawer {
+    background: rgba(15, 15, 30, 0.98) !important;
+    backdrop-filter: blur(20px);
+}
+
+.navMenuOption:hover {
+    background: rgba(0, 164, 220, 0.2) !important;
+    border-radius: 8px;
+}
+
+.navMenuOption-selected {
+    background: rgba(0, 164, 220, 0.3) !important;
+    border-radius: 8px;
+}
+
+/* ===== Progress Bars ===== */
+.itemProgressBar {
+    background: var(--accent-color) !important;
+    height: 4px;
+}
+
+.itemProgressBarForeground {
+    background: var(--accent-color) !important;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26, 26, 46, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 164, 220, 0.5);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 164, 220, 0.8);
+}
+
+/* ===== Video Player Controls ===== */
+.videoOsdBottom {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent) !important;
+}
+
+.mdl-slider-container,
+.osdProgressBar {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.mdl-slider::-webkit-slider-thumb {
+    background: var(--accent-color) !important;
+}
+
+/* ===== Text & Typography ===== */
+.listItemBodyText,
+.secondary {
+    color: var(--text-secondary) !important;
+}
+
+.detailLogo {
+    filter: drop-shadow(0 4px 12px rgba(0, 164, 220, 0.5));
+}
+
+/* ===== Home Screen Sections ===== */
+.section0 .cardText,
+.section1 .cardText,
+.section2 .cardText {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== Input Fields ===== */
+.emby-input,
+.emby-textarea {
+    background: rgba(22, 33, 62, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+}
+
+.emby-input:focus,
+.emby-textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(0, 164, 220, 0.2);
+}
+
+/* ===== Backdrop ===== */
+.backdropImage {
+    filter: blur(20px) brightness(0.4);
+}
+
+/* ===== Search Box ===== */
+.searchFields {
+    background: rgba(22, 33, 62, 0.8) !important;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Context Menu ===== */
+.dialogBackdrop {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.dialog {
+    background: var(--background-card) !important;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Loading Spinner ===== */
+.mdl-spinner__circle-clipper .mdl-spinner__circle {
+    border-color: var(--accent-color) !important;
+}
+
+/* ===== Rating Stars ===== */
+.starIcon {
+    color: #ffd700 !important;
+}
+
+/* ===== Glassmorphism Effect for Modals ===== */
+.formDialogContent {
+    background: rgba(22, 33, 62, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+}
+
+/* ===== Active/Selected States ===== */
+.selectArrow,
+.listItemIcon {
+    color: var(--accent-color) !important;
+}
+
+.listItem:hover {
+    background: rgba(0, 164, 220, 0.1) !important;
+}
+
+/* ===== Dashboard Styling ===== */
+.dashboardSection {
+    background: rgba(22, 33, 62, 0.6) !important;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .card {
+        border-radius: 8px !important;
+    }
+    
+    :root {
+        --border-radius: 8px;
+    }
+}
